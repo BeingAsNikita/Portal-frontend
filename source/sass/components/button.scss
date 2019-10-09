@@ -1,0 +1,14 @@
+.button {
+    width: 145px;
+    height: 45px;
+    color: #ffffff;
+    background-color: $accent;
+    text-align: center;
+    display: block;
+    text-transform: uppercase;
+    padding-top: 12px;
+
+    &--nav{
+        margin-left: auto;
+    }
+}

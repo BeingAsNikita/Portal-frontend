@@ -1,0 +1,48 @@
+.header {
+
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.06);
+
+    &__wrap {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: baseline;
+        padding: 11px 15px;
+        position: relative;
+    }
+
+    &__search-wrap {
+        margin-left: auto;
+        margin-right: 23px;
+    }
+
+    &__search-field {
+        position: absolute;
+        display: none;
+    }
+
+    &__search-btn {
+        width: 26px;
+        height: 26px;
+        border: none;
+        background-color: inherit;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 2px;
+
+    }
+
+
+
+    &__account-btn {
+        width: 24px;
+        height: 24px;
+        background-image: url('../../img/no-img.svg');
+
+        span {
+            display: none;
+        }
+    }
+}

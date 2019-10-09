@@ -1,0 +1,236 @@
+.form {
+    background-color: $base-bg;
+    text-align: center;
+
+    &__preview {
+        background-image: url('../img/illustration.svg');
+        background-position: 50% 70%;
+        padding-top: 36px;
+        display: flex;
+        flex-direction: column;
+        height: 90vh;
+        display: none;
+    }
+
+    &__preview-title {
+        color: $accent;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 38px;
+    }
+
+    &__preview-text {
+        width: 307px;
+        margin: 0 auto;
+        font-size: 16px;
+        line-height: 24px;
+        color: #909AAB;
+        font-style: normal;
+        
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 18px;
+        line-height: 38px;
+        color: $text;
+        font-weight: bold;
+        margin: 0;
+        margin-bottom: 34px;
+    }
+
+    &__nav {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: baseline;
+        padding-left: 35px;
+        padding-right: 35px;
+        margin-top: 43px;
+        padding-bottom: 25px;
+        margin-top: auto;
+    }
+
+    &__nav-dots  {
+        background: rgba(44, 120, 246, 0.6);
+        width: 8px;
+        height: 8px;
+        border-radius: 30px;
+        display: block;
+        margin-left: 7px;
+
+        &--active {
+            width: 24px;
+            background: $accent;
+
+        }
+    }
+
+    &__personal-info {
+        padding-top: 20px;
+        padding-left: 35px;
+        padding-right: 35px;
+        height: 90vh;
+        display: none;
+    }
+
+    &__radio-feild {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-left: 20px;
+        padding-right: 20px;
+        max-width: 375px;
+        margin: 0 auto;
+        margin-bottom: 64px;
+    }
+
+    &__radio {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        width: 112px;
+        height: 104px;
+        background-color: inherit;
+        border: 1px solid $accent;
+        font-size: 12px;
+        line-height: 14px;
+        border-radius: 6px;
+        padding-bottom: 18px;
+    }
+
+    &__radio-label {
+        position: relative;
+
+        svg {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            margin-left: -15px;
+        }
+    }
+
+    &__radio-input:checked + &__radio,
+    &__radio-input:focus + &__radio{
+        background-color: $accent;
+        box-shadow: 0px 20px 54px rgba(0, 83, 221, 0.4);
+        color: #ffffff;
+        font-weight: bold;
+    }
+
+    &__radio-input:checked ~ svg path,
+    &__radio-input:focus ~ svg path  {
+       fill: #ffffff;
+    }
+
+    &__input-group {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+        label {
+            font-size: 10px;
+            line-height: 22px;
+            text-align: left;
+            margin-bottom: 5px;
+            position: relative;
+
+            span {
+                position: absolute;
+                top: -2px;
+                right: -5px;
+                color: #B7B7B7;
+            }
+        }
+
+        a {
+            margin-left: auto;
+            text-decoration: underline;
+            font-size: 14px;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+
+                left: -50px;
+                top: -5px;
+
+                width: 39px;
+                height: 39px;
+                border-radius: 50%;
+                background-color: #ffffff;
+                background-image: url('../img/tooth.svg');
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+            }
+        }
+    }
+
+    &__input  {
+        width: 100%;
+        border: none;
+        padding-bottom: 8px;
+        border-bottom: 1px solid $base-dark;
+        margin-bottom: 36px;
+        background-color: inherit;
+        outline: none;
+        color: $text;
+
+        &::placeholder{
+            font-size: 16px;
+            line-height: 22px;
+            color:  #C4C4C4;
+        }
+    }
+
+    &__general-info {
+        padding-top: 20px;
+        padding-left: 35px;
+        padding-right: 35px;
+        height: 90vh;
+    }
+
+    &__file-group {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 35px;
+    }   
+
+    &__file-description {
+        width: 153px;
+        
+        p {
+            padding-top: 10px;
+            margin: 0;
+            margin-bottom: 20px;
+            text-align: left;
+            font-size: 11px;
+            line-height: 18px;  
+        }
+    }
+
+    &__file {
+        width: 126px;
+        height: 126px;
+        padding-bottom: 30px;
+        background-image: url('../img/Vector.svg');
+        background-repeat: no-repeat;
+        background-position: 50% 35%;
+        background-color: #ffffff;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        text-transform: uppercase;
+        font-size: 9px;
+        line-height: 19px;
+        color: #B8D2FC;
+        text-transform: uppercase;
+
+    }
+}
+
