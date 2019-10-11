@@ -37,3 +37,9 @@ html {
     padding-left: 15px;
     padding-right: 15px;
   }
+
+  label.error {
+    background-color: #ffffff;
+    border: 1px solid red;
+    color: red;
+  }

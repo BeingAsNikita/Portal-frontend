@@ -7,8 +7,19 @@
     display: block;
     text-transform: uppercase;
     padding-top: 12px;
+    padding-bottom: 10px;
+    border: none;
 
     &--nav{
         margin-left: auto;
+        display: none;
+    }
+
+    &--disabled {
+        pointer-events: none;
+        cursor: not-allowed;
+        text-decoration: none;
+        background:  #EAECEF;;
+        color:  #A4AAB3;
     }
 }

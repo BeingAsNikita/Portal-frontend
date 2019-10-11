@@ -1,15 +1,39 @@
 .form {
-    background-color: $base-bg;
+
     text-align: center;
+
+ 
+
+
+    &__form {
+        position: relative;
+        height: 90vh;
+        background-color: $base-bg;
+        @media (min-width: $desktop) {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
 
     &__preview {
         background-image: url('../img/illustration.svg');
         background-position: 50% 70%;
         padding-top: 36px;
+        padding-left: 35px;
+        padding-right: 35px;
         display: flex;
         flex-direction: column;
-        height: 90vh;
-        display: none;
+        height: 90%;
+        background-color: #ffffff;
+
+        @media (min-width: $desktop) {
+            padding-left: 58px;
+            padding-right: 48px;
+            padding-top: 44px;
+            height: auto;
+        }
+        
     }
 
     &__preview-title {
@@ -17,6 +41,7 @@
         font-weight: bold;
         font-size: 24px;
         line-height: 38px;
+
     }
 
     &__preview-text {
@@ -37,18 +62,27 @@
         font-weight: bold;
         margin: 0;
         margin-bottom: 34px;
+
+        @media (min-width: $desktop) {
+            text-align: left;
+        }
     }
 
     &__nav {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        align-items: baseline;
+        align-items: flex-end;
+        margin-top: 43px;
         padding-left: 35px;
         padding-right: 35px;
-        margin-top: 43px;
-        padding-bottom: 25px;
+        
         margin-top: auto;
+
+        @media (min-width: $desktop) {
+            padding-bottom: 53px;
+            flex: 1;
+        }
     }
 
     &__nav-dots  {
@@ -59,19 +93,32 @@
         display: block;
         margin-left: 7px;
 
+        @media (min-width: $desktop) {
+            display: none;
+          }
+
         &--active {
             width: 24px;
             background: $accent;
 
         }
+
     }
 
     &__personal-info {
         padding-top: 20px;
         padding-left: 35px;
         padding-right: 35px;
-        height: 90vh;
-        display: none;
+        display: flex;
+        flex-direction: column;
+        height: 90%;
+      
+
+        @media (min-width: $desktop) {
+            padding-left: 93px;
+            height: auto;
+        }
+        
     }
 
     &__radio-feild {
@@ -83,7 +130,14 @@
         padding-right: 20px;
         max-width: 375px;
         margin: 0 auto;
+  
         margin-bottom: 64px;
+
+        @media (min-width: $desktop) {
+           margin-left: 0;
+           padding-left: 0;
+           max-width: 500px;
+        }
     }
 
     &__radio {
@@ -98,16 +152,34 @@
         line-height: 14px;
         border-radius: 6px;
         padding-bottom: 18px;
+
+        @media (min-width: $desktop) {
+            width: 200px;
+            height: 142px;
+         }
     }
 
     &__radio-label {
         position: relative;
+        margin-right: 35px;
+
+        &:last-child {
+            margin-right: 0;
+        }
 
         svg {
             position: absolute;
-            top: 20px;
+            top: 50%;
+            margin-top: -15px;
             left: 50%;
             margin-left: -15px;
+
+            @media (min-width: $desktop) {
+                width: 40px;
+                height: 40px;
+                margin-top: -25px;
+                margin-left: -20px;
+             }
         }
     }
 
@@ -128,7 +200,7 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        
+
         label {
             font-size: 10px;
             line-height: 22px;
@@ -149,6 +221,10 @@
             text-decoration: underline;
             font-size: 14px;
             position: relative;
+
+            @media (min-width: $desktop) {
+                margin-left: 80px;
+             }
 
             &::before {
                 content: "";
@@ -177,6 +253,8 @@
         background-color: inherit;
         outline: none;
         color: $text;
+        font-size: 16px;
+        line-height: 22px;
 
         &::placeholder{
             font-size: 16px;
@@ -189,7 +267,17 @@
         padding-top: 20px;
         padding-left: 35px;
         padding-right: 35px;
-        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        height: 90%;
+        display: none;
+
+        @media (min-width: $desktop) {
+           height: auto;
+           padding-left: 93px;
+           flex: 1;
+         }
+       
     }
 
     &__file-group {
@@ -198,6 +286,7 @@
         justify-content: space-between;
         flex-wrap: wrap;
         margin-bottom: 35px;
+        max-width: 375px;
     }   
 
     &__file-description {
