@@ -1,18 +1,26 @@
 .form {
-
+    min-height: 100vh;
     text-align: center;
-
- 
+    display: flex;
+    flex-direction: column;
+    @media (min-width: $desktop) {
+        width: 100%;
+        flex-direction: row;
+        height: auto;
+        
+    }
 
 
     &__form {
+        
         position: relative;
         height: 90vh;
         background-color: $base-bg;
         @media (min-width: $desktop) {
+            width: 100%;
             display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
+            flex-direction: column;
+            padding-right: 260px;
         }
     }
 
@@ -24,7 +32,7 @@
         padding-right: 35px;
         display: flex;
         flex-direction: column;
-        height: 90%;
+        min-height: 100vh;
         background-color: #ffffff;
 
         @media (min-width: $desktop) {
@@ -170,7 +178,7 @@
         svg {
             position: absolute;
             top: 50%;
-            margin-top: -15px;
+            margin-top: -35px;
             left: 50%;
             margin-left: -15px;
 
@@ -270,12 +278,13 @@
         display: flex;
         flex-direction: column;
         height: 90%;
-        display: none;
 
         @media (min-width: $desktop) {
            height: auto;
            padding-left: 93px;
            flex: 1;
+        display: none;
+
          }
        
     }

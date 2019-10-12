@@ -3,7 +3,7 @@ $(document).ready(function(){
   var steps = $(".form__form").children(".form__step");
   var nextStep = $('.next');
   var submit = $('.submit');
-  var currentStep = 1;
+  var currentStep = 0;
   var isInputFilled = false;
 
   $(steps[currentStep]).css('display', 'flex');

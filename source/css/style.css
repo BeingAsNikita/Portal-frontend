@@ -379,22 +379,38 @@ label.error {
       display: none; }
 
 .form {
-  text-align: center; }
+  min-height: 100vh;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+  @media (min-width: 1366px) {
+    .form {
+      width: 100%;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      height: auto; } }
   .form__form {
     position: relative;
     height: 90vh;
     background-color: #F8FAFD; }
     @media (min-width: 1366px) {
       .form__form {
+        width: 100%;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        -webkit-box-orient: horizontal;
+        -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap; } }
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding-right: 260px; } }
   .form__preview {
     background-image: url("../img/illustration.svg");
     background-position: 50% 70%;
@@ -408,7 +424,7 @@ label.error {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    height: 90%;
+    min-height: 100vh;
     background-color: #ffffff; }
     @media (min-width: 1366px) {
       .form__preview {
@@ -545,7 +561,7 @@ label.error {
     .form__radio-label svg {
       position: absolute;
       top: 50%;
-      margin-top: -15px;
+      margin-top: -35px;
       left: 50%;
       margin-left: -15px; }
       @media (min-width: 1366px) {
@@ -647,15 +663,15 @@ label.error {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    height: 90%;
-    display: none; }
+    height: 90%; }
     @media (min-width: 1366px) {
       .form__general-info {
         height: auto;
         padding-left: 93px;
         -webkit-box-flex: 1;
         -ms-flex: 1;
-        flex: 1; } }
+        flex: 1;
+        display: none; } }
   .form__file-group {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -725,3 +741,73 @@ label.error {
     text-decoration: none;
     background: #EAECEF;
     color: #A4AAB3; }
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-right: 58px;
+  padding-left: 58px; }
+  .footer__nav-wrap {
+    border-top: 1px solid #E9EEF2;
+    padding-top: 12px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row; }
+  .footer__nav-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row; }
+  .footer__nav-item {
+    margin-right: 24px;
+    border-bottom: 1px solid #DEE3E7; }
+  .footer__nav-link {
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 30px; }
+  .footer__social {
+    margin-left: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row; }
+  .footer__bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+    padding-bottom: 12px; }
+  .footer__privacyPolicy {
+    color: #30353E;
+    margin-left: 50px;
+    border-bottom: 1px solid #2C78F6; }
+  .footer__contacts {
+    margin-left: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row; }
